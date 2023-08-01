@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.25)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
@@ -30,6 +30,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         CXX_STANDARD_REQUIRED ON
 )
 
+install(TARGETS ${PROJECT_NAME})
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
